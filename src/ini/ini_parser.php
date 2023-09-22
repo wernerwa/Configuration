@@ -281,7 +281,7 @@ class ezcConfigurationIniParser implements Iterator
      * @return ezcConfigurationIniItem or ezcConfigurationValidationItem
      *          depending on the type of parser
      */
-    public function current()
+    public function current(): ?ezcConfigurationIniItem
     {
         return $this->item;
     }
@@ -294,7 +294,7 @@ class ezcConfigurationIniParser implements Iterator
      *
      * @return int
      */
-    public function key()
+    public function key(): int
     {
         return 0;
     }
@@ -427,7 +427,7 @@ class ezcConfigurationIniParser implements Iterator
      * the parseNext() method which returns when a Group Header, Setting or
      * Validation error has been found.
      */
-    public function next()
+    public function next(): void
     {
         $this->parseNext();
     }
@@ -442,7 +442,7 @@ class ezcConfigurationIniParser implements Iterator
      *
      * @throws Exception whenever this method is called.
      */
-    public function rewind()
+    public function rewind(): void
     {
         throw new Exception( 'You can only use this implementation of the iterator with a NoRewindIterator.' );
     }
@@ -456,7 +456,7 @@ class ezcConfigurationIniParser implements Iterator
      *
      * @return bool Whether the end of file has been reached.
      */
-    public function valid()
+    public function valid(): bool
     {
         return !feof( $this->fp ) || $this->itemFound;
     }
