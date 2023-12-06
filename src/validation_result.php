@@ -151,7 +151,7 @@ class ezcConfigurationValidationResult
     /**
      * Returns a list with validation items
      *
-     * @return array(ezcConfigurationValidationItem) The list with items
+     * @return ezcConfigurationValidationItem[] The list with items
      */
     public function getResultList()
     {

@@ -446,7 +446,7 @@ class ezcConfiguration
      * Returns true if all the specified settings $settings exists within $group.
      *
      * @param string $group
-     * @param array(string) $settings
+     * @param string[] $settings
      * @return bool
      */
     public function hasSettings( $group, array $settings )
@@ -548,9 +548,9 @@ class ezcConfiguration
      * If the settings do not already exists it will be created.
      *
      * @param string $group
-     * @param array(string) $settings
-     * @param array(mixed)  $values
-     * @param array(string) $comments The comment belonging to the setting
+     * @param string[] $settings
+     * @param mixed[]  $values
+     * @param string[] $comments The comment belonging to the setting
      * @return void
      */
     public function setSettings( $group, $settings, $values, $comments = null )
@@ -574,7 +574,7 @@ class ezcConfiguration
      * @throws ezcConfigurationUnknownSettingException if one or more of the
      *         settings do not exist.
      * @param string $group
-     * @param array(string) $settings
+     * @param string[] $settings
      * @return void
      */
     public function removeSettings( $group, array $settings )
@@ -637,7 +637,7 @@ class ezcConfiguration
      * @throws ezcConfigurationUnknownGroupException if the group does not
      *         exist.
      * @param string $group
-     * @return array(string)
+     * @return string[]
      */
     public function getSettingNames( $group )
     {
@@ -724,7 +724,7 @@ class ezcConfiguration
      *        'group2' => array( 'setting3' => 'value3' ) );
      * </code>
      *
-     * @return array(array)
+     * @return array[]
      */
     public function getAllSettings()
     {
@@ -742,7 +742,7 @@ class ezcConfiguration
      *        'group2' => array( 'setting3' => 'comment3' ) );
      * </code>
      *
-     * @return array(array)
+     * @return array[]
      */
     public function getAllComments()
     {
